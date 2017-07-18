@@ -15,11 +15,13 @@
 %%====================================================================
 
 start(_StartType, _StartArgs) ->
-    emq_qiscus_sdk_user_status_sup:start_link().
+    {ok, Sup} = emq_qiscus_sdk_user_status_sup:start_link(),
+    emq_qiscus_sdk_user_status:load(application:get_all_env()),
+    {ok, Sup}.
 
 %%--------------------------------------------------------------------
 stop(_State) ->
-    ok.
+    emq_qiscus_sdk_user_status:unload().
 
 %%====================================================================
 %% Internal functions

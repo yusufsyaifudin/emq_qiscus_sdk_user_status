@@ -1,8 +1,20 @@
 emq_qiscus_sdk_user_status
 =====
 
-Build
+> Don't forget to install erlang above version 19.3
 
+For ubuntu
+```bash
+$ wget https://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb
+$ sudo dpkg -i erlang-solutions_1.0_all.deb
+$ sudo apt update
+$ sudo apt install erlang
+```
+
+see [https://packages.erlang-solutions.com/erlang/](https://packages.erlang-solutions.com/erlang/) for more info.
+
+
+## Build
 First clone [https://github.com/emqtt/emq-relx](https://github.com/emqtt/emq-relx) in your system and enter into the `emq-relx` folder. Then in plugin section of `relx.config` add
 
 ```
