@@ -16,7 +16,7 @@ and add,
 dep_emq_qiscus_sdk_user_status = git https://github.com/yusufsyaifudin/emq_qiscus_sdk_user_status master  
 ```
 
-Finally execute, `make clean && make && make rel`. If everything goes ok then start the broker. Then move to `_rel/emqttd/bin` and execute `emqttd_ctl plugins load emq_qiscus_sdk_user_status`
+Finally execute, `make clean && make && make rel`. If everything goes ok then start the broker. Then move to `deps` and execute `emqttd_ctl plugins load emq_qiscus_sdk_user_status`
 
 Your plugin is now running in the system. To stop it execute `emqttd_ctl plugins unload emq_qiscus_sdk_user_status`.
 
